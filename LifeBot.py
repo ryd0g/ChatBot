@@ -17,10 +17,21 @@ def get_life_bot_response(user_response):
     return choice(bot_response_yes)
   elif user_response == "no":
     return choice(bot_response_no)
-  elif user_respons == "almost":
+  elif user_response == "almost":
     return choice(bot_response_almost)
   else:
     return "Maybe we should just get some rest."
+
+#function for asking how many hours the user worked
+def hours_response(hours):
+
+  bot_response_low = ['Maybe you should study some more', 'Keep going!', 'Put in a bit more time']
+  bot_response_high = ['Maybe its time for a break', 'Good work for the day!', 'Now that is dedication']
+
+  if int(hours) <= 1:
+    return choice(bot_response_low)
+  elif int(hours) >= 2:
+    return choice(bot_response_high)
 
 
 print("Welcome to the Life Bot")
@@ -29,8 +40,16 @@ print("Let us see how you are doing today. ")
 #while loop to ask for input until user inputs 'done'
 while True:
   user_response = input("Have you finished your work for the day? ")
-  if user_response == 'done':
+  if user_response == 'next':
     break
 
   bot_response = get_life_bot_response(user_response)
   print(bot_response)
+
+while True:
+  hours = input("How many hours did you spend working? ")
+  if hours == 'done':
+    break
+
+  bot_respone = hours_response(hours)
+  print(bot_respone)
