@@ -40,14 +40,14 @@ print("Let us see how you are doing today. ")
 #while loop to ask for input until user inputs 'done'
 while True:
   user_response = input("Have you finished your work for the day? ")
-  if user_response == 'next':
+  if user_response == 'done':
     break
 
   bot_response = get_life_bot_response(user_response)
   print(bot_response)
 
 while True:
-  hours = input("How many hours did you spend working? ")
+  hours = input("How many hours did you spend studying? ")
   if hours == 'done':
     break
 
