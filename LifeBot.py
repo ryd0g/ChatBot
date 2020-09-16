@@ -5,7 +5,7 @@
 from random import choice
 
 #combine functions and conditionals to get a response from the bot
-def get_mood_bot_response(user_response):
+def get_life_bot_response(user_response):
 
   #add some bot responses to this list
   bot_response_yes = ['Lets go for a run!', 'Gotta take the dog out now', 'Maybe you can play some games!']
@@ -21,7 +21,7 @@ def get_mood_bot_response(user_response):
 
 
 print("Welcome to the Life Bot")
-print("What are we gonna do today? ")
+print("Let/'s see how you are doing today. ")
 
 #TODO: we want to keep repeating until the user enters "done" what should we put here?
 while True:
@@ -29,5 +29,5 @@ while True:
   if user_response == 'done':
     break
   #TODO: what goes here
-  bot_response = get_mood_bot_response(user_response)
+  bot_response = get_life_bot_response(user_response)
   print(bot_response)
