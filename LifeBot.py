@@ -10,24 +10,27 @@ def get_life_bot_response(user_response):
   #add some bot responses to this list
   bot_response_yes = ['Lets go for a run!', 'Gotta take the dog out now', 'Maybe you can play some games!']
   bot_response_no = ['Lets study some more', 'You should finish your work', 'Make sure you turn everything in!']
+  bot_response_almost = ['Only a little bit more to go!', 'Get it done!', 'Keep it up!']
 
-  #yes, no, or else responses
+  #yes, no, almost, or else responses
   if user_response == "yes":
     return choice(bot_response_yes)
   elif user_response == "no":
     return choice(bot_response_no)
+  elif user_respons == "almost":
+    return choice(bot_response_almost)
   else:
     return "Maybe we should just get some rest."
 
 
 print("Welcome to the Life Bot")
-print("Let/'s see how you are doing today. ")
+print("Let us see how you are doing today. ")
 
 #while loop to ask for input until user inputs 'done'
 while True:
-  user_response = input("Have you finished all your homework? ")
+  user_response = input("Have you finished your work for the day? ")
   if user_response == 'done':
     break
-  
+
   bot_response = get_life_bot_response(user_response)
   print(bot_response)
