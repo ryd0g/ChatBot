@@ -4,15 +4,15 @@
 
 from random import choice
 
-#combine functions and conditionals to get a response from the bot
+#function to get response from user
 def get_life_bot_response(user_response):
 
   #add some bot responses to this list
   bot_response_yes = ['Lets go for a run!', 'Gotta take the dog out now', 'Maybe you can play some games!']
   bot_response_no = ['Lets study some more', 'You should finish your work', 'Make sure you turn everything in!']
 
+  #yes, no, or else responses
   if user_response == "yes":
-    #TODO: use choice to randomly return a response from the list
     return choice(bot_response_yes)
   elif user_response == "no":
     return choice(bot_response_no)
@@ -23,11 +23,11 @@ def get_life_bot_response(user_response):
 print("Welcome to the Life Bot")
 print("Let/'s see how you are doing today. ")
 
-#TODO: we want to keep repeating until the user enters "done" what should we put here?
+#while loop to ask for input until user inputs 'done'
 while True:
   user_response = input("Have you finished all your homework? ")
   if user_response == 'done':
     break
-  #TODO: what goes here
+  
   bot_response = get_life_bot_response(user_response)
   print(bot_response)
